@@ -107,4 +107,4 @@ Para executar o projeto é necessário possuir:
 Clone o repositório:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone [URL_DO_REPOSITORIO](https://github.com/arthurbalmantop/cineRate)
