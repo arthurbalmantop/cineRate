@@ -96,7 +96,7 @@ Também existe uma restrição única entre `user_id` e `post_id`.
 
 Para executar o projeto é necessário possuir:
 
-- PHP 8.1 ou superior
+- PHP 8.2 ou superior
 - Composer
 - Node.js
 - NPM
