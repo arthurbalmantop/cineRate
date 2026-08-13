@@ -108,3 +108,92 @@ Clone o repositório:
 
 ```bash
 git clone https://github.com/arthurbalmantop/cineRate
+
+Entre na pasta do projeto:
+
+cd cineRate
+
+Instale as dependências PHP:
+
+composer install
+
+Instale as dependências do frontend:
+
+npm install
+
+Copie o arquivo de ambiente.
+
+Windows
+copy .env.example .env
+Linux / macOS
+cp .env.example .env
+
+Gere a chave da aplicação:
+
+php artisan key:generate
+Configuração do banco de dados
+
+Crie um banco de dados chamado:
+
+cinerate
+
+Depois configure o arquivo .env:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=cinerate
+DB_USERNAME=root
+DB_PASSWORD=
+
+Execute as migrations:
+
+php artisan migrate
+Storage
+
+Para habilitar o acesso público às imagens de perfil:
+
+php artisan storage:link
+Frontend
+
+Para compilar os arquivos do frontend:
+
+npm run build
+
+Durante o desenvolvimento:
+
+npm run dev
+Executando o projeto
+
+Inicie o servidor Laravel:
+
+php artisan serve
+
+Acesse:
+
+http://127.0.0.1:8000
+Testes
+
+Para executar os testes automatizados:
+
+php artisan test
+
+Os testes cobrem regras importantes da aplicação, como:
+
+alteração de voto sem duplicidade;
+acompanhamento automático ao votar;
+bloqueio de votos em publicações encerradas;
+bloqueio de acompanhamento em publicações encerradas;
+restrição de exclusão de publicações com interações.
+Recuperação de senha
+
+Em ambiente local, caso o envio de e-mail esteja configurado com:
+
+MAIL_MAILER=log
+
+o conteúdo do e-mail de recuperação poderá ser consultado em:
+
+storage/logs/laravel.log
+
+Autor
+Arthur Balmanto
