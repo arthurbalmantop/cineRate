@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Route::livewire('/login', 'auth.login')
@@ -28,7 +28,7 @@ Route::livewire('/profile', 'profile.edit')
     ->middleware('auth')
     ->name('profile.edit');
 
-Route::livewire('/followinf', 'following.index')
+Route::livewire('/following', 'following.index')
     ->middleware('auth')
     ->name('following.index');
 
