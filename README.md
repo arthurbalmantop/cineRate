@@ -108,92 +108,137 @@ Clone o repositório:
 
 ```bash
 git clone https://github.com/arthurbalmantop/cineRate
+```
 
 Entre na pasta do projeto:
 
+```bash
 cd cineRate
+```
 
 Instale as dependências PHP:
 
+```bash
 composer install
+```
 
 Instale as dependências do frontend:
 
+```bash
 npm install
+```
 
 Copie o arquivo de ambiente.
 
-Windows
+### Windows
+
+```bash
 copy .env.example .env
-Linux / macOS
+```
+
+### Linux / macOS
+
+```bash
 cp .env.example .env
+```
 
 Gere a chave da aplicação:
 
+```bash
 php artisan key:generate
-Configuração do banco de dados
+```
+
+## Configuração do banco de dados
 
 Crie um banco de dados chamado:
 
+```text
 cinerate
+```
 
-Depois configure o arquivo .env:
+Depois configure o arquivo `.env`:
 
+```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=cinerate
 DB_USERNAME=root
 DB_PASSWORD=
+```
 
 Execute as migrations:
 
+```bash
 php artisan migrate
-Storage
+```
+
+## Storage
 
 Para habilitar o acesso público às imagens de perfil:
 
+```bash
 php artisan storage:link
-Frontend
+```
+
+## Frontend
 
 Para compilar os arquivos do frontend:
 
+```bash
 npm run build
+```
 
 Durante o desenvolvimento:
 
+```bash
 npm run dev
-Executando o projeto
+```
+
+## Executando o projeto
 
 Inicie o servidor Laravel:
 
+```bash
 php artisan serve
+```
 
 Acesse:
 
+```text
 http://127.0.0.1:8000
-Testes
+```
+
+## Testes
 
 Para executar os testes automatizados:
 
+```bash
 php artisan test
+```
 
 Os testes cobrem regras importantes da aplicação, como:
 
-alteração de voto sem duplicidade;
-acompanhamento automático ao votar;
-bloqueio de votos em publicações encerradas;
-bloqueio de acompanhamento em publicações encerradas;
-restrição de exclusão de publicações com interações.
-Recuperação de senha
+- alteração de voto sem duplicidade;
+- acompanhamento automático ao votar;
+- bloqueio de votos em publicações encerradas;
+- bloqueio de acompanhamento em publicações encerradas;
+- restrição de exclusão de publicações com interações.
+
+## Recuperação de senha
 
 Em ambiente local, caso o envio de e-mail esteja configurado com:
 
+```env
 MAIL_MAILER=log
+```
 
 o conteúdo do e-mail de recuperação poderá ser consultado em:
 
+```text
 storage/logs/laravel.log
+```
 
-Autor
+## Autor
+
 Arthur Balmanto
